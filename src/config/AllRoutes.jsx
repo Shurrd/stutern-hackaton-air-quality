@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageLoader from '../components/loader/PageLoader';
 import Layout from '../components/layout/Layout';
+import Navbar from '../components/Navbar';
 
 const AllRoutes = () => {
   const NotFound = lazy(() => import('../pages/notFound/NotFound'));
@@ -14,6 +15,7 @@ const AllRoutes = () => {
     <Suspense fallback={<PageLoader />}>
       <BrowserRouter>
         <Layout>
+          <Navbar />
           <Routes>
             <Route path='/home' element={<Home />} />
           </Routes>

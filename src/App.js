@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar';
 import AllRoutes from './config/AllRoutes';
 
 function App() {
