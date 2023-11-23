@@ -9,6 +9,7 @@ const AllRoutes = () => {
   const Home = lazy(() => import('../pages/homepage'));
   const Login = lazy(() => import('../pages/auth/Login'));
   const Signup = lazy(() => import('../pages/auth/Signup'));
+  const GlobalIndex = lazy(() => import('../pages/globalIndex/GlobalIndex'));
 
   return (
     <Suspense fallback={<PageLoader />}>
@@ -20,6 +21,7 @@ const AllRoutes = () => {
         </Layout>
         <Routes>
           <Route path='/' element={<Overview />} />
+          <Route path='/global-index' element={<GlobalIndex />} />
           <Route path='/dashboard' element={<Overview />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
