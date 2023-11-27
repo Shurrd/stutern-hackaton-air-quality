@@ -3,7 +3,7 @@ import { BiWorld } from 'react-icons/bi';
 
 const navLinks = [
   {
-    id: 1,
+    id: 0,
     name: 'Overview',
     url: '/',
     icon: GoHome,
@@ -11,13 +11,13 @@ const navLinks = [
   {
     id: 1,
     name: 'Global Index',
-    url: '/',
+    url: '/global-index',
     icon: BiWorld,
   },
   {
-    id: 1,
+    id: 2,
     name: 'Settings',
-    url: '/',
+    url: '/settings',
     icon: GoGear,
   },
 ];

@@ -37,9 +37,11 @@ const EmailConfirmation = () => {
         Didn't get a code?{' '}
         <span className='text-primary underline'>Click to resend</span>
       </p>
-      <div>
-        <Button>Verify</Button>
-        <Button>Cancel</Button>
+      <div className='mt-8 sm:flex sm:gap-3 '>
+        <Button className={'sm:w-1/2'}>Verify</Button>
+        <Button variant={'outline'} className={'sm:w-1/2'}>
+          Cancel
+        </Button>
       </div>
     </div>
   );

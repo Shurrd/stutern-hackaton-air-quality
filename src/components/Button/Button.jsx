@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'text-white w-full',
-        outline: '',
+        outline: 'bg-white border-gray border',
       },
       size: {
         default: 'px-[52px] py-[17px]',
