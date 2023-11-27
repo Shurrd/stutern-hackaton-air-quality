@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageLoader from '../components/loader/PageLoader';
+import Navbar from '../components/Navbar';
 import Layout from '../layout/Layout';
 import EmailConfirmation from '../pages/auth/EmailConfirmation';
 
@@ -15,6 +16,7 @@ const AllRoutes = () => {
   return (
     <Suspense fallback={<PageLoader />}>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/' element={<Overview />} />

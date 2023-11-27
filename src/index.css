@@ -16,7 +16,6 @@ body {
   background-color: #fbfbfb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Inter', sans-serif;
 }
