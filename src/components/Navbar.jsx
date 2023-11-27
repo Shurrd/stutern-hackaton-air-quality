@@ -70,7 +70,7 @@ const Navbar = () => {
         }
       >
         {navLinks.map((item) => {
-          const { id, name, url, icon } = item;
+          const { id, name, icon } = item;
           const Icon = icon;
           return (
             <Link
