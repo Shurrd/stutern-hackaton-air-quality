@@ -1,13 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageLoader from '../components/loader/PageLoader';
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout';
 import Navbar from '../components/Navbar';
-=======
 import Layout from '../layout/Layout';
 import EmailConfirmation from '../pages/auth/EmailConfirmation';
->>>>>>> main
 
 const AllRoutes = () => {
   const NotFound = lazy(() => import('../pages/notFound/NotFound'));

@@ -2,9 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-<<<<<<< HEAD
     extend: {},
-=======
     extend: {
       colors: {
         // Extend the border color
@@ -18,7 +16,6 @@ module.exports = {
         // 'primary-dark': 'hsl(256, 80%, 40%)', // Adjust the values as needed
       },
     },
->>>>>>> main
   },
   plugins: [],
 };

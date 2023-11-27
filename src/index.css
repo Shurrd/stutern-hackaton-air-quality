@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
 
 * {
   box-sizing: border-box;
@@ -17,7 +15,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fbfbfb;
 }
->>>>>>> main
 
 body {
   font-family: 'Inter', sans-serif;
