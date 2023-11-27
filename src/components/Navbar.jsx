@@ -23,6 +23,7 @@ const Navbar = () => {
             <img src={Logo} alt='Air Quality' />
           </Link>
           <Link
+            to='/'
             className={
               menu
                 ? 'bg-[#53389E] text-white hidden  md:flex items-center rounded-md px-2 py-1 gap-2 text-sm font-medium'
@@ -33,6 +34,7 @@ const Navbar = () => {
             Overview
           </Link>
           <Link
+            to='/global-index'
             className={
               menu
                 ? 'hidden md:flex items-center gap-2 text-[#a5a6a7] text-sm font-semibold'

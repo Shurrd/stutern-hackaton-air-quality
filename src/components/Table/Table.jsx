@@ -2,7 +2,7 @@ import React from 'react';
 // import { SkeletonTheme } from 'react-loading-skeleton';
 // import SkeletonBox from '../SkeletonBox/SkeletonBox';
 
-const Table = ({ header, column, loader, url, label }) => {
+const Table = ({ header, column, loader, url }) => {
   return (
     <div className='p-4 lg:p-8'>
       <div className='flex flex-col'>
@@ -15,7 +15,7 @@ const Table = ({ header, column, loader, url, label }) => {
                     {header?.map(({ title, key }) => (
                       <th
                         scope='col'
-                        className='pt-6 pb-3 font-semibold'
+                        className='pt-6 pb-3 font-semibold whitespace-nowrap px-4'
                         key={key}
                       >
                         {title}
@@ -30,7 +30,7 @@ const Table = ({ header, column, loader, url, label }) => {
                       key={i}
                     >
                       {row?.map((item, index) => (
-                        <td className='whitespace-nowrap py-3 pr-4' key={index}>
+                        <td className='whitespace-nowrap py-3 px-4' key={index}>
                           {item}
                         </td>
                       ))}

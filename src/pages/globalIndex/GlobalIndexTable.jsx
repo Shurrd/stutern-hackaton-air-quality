@@ -1,7 +1,11 @@
 import React, { useMemo, useState } from 'react';
+
+import { FiInfo } from 'react-icons/fi';
+
 import Table from '../../components/Table/Table';
 import { airQualityInfoList } from '../../mockData';
 import Pagination from '../../components/Pagination/Pagination';
+import Searchbar from '../../components/SearchBar/Searchbar';
 
 export const initialQuery = {
   paginate: true,
@@ -42,7 +46,15 @@ const GlobalIndexTable = () => {
   );
   return (
     <div className='mb-9'>
-      <div></div>
+      <div className='flex justify-between'>
+        <div className='flex gap-2.5 items-center'>
+          <p className='text-[#11263c] sm:text-lg font-bold'>AQI DATA</p>
+          <FiInfo size={18} color='#D0D1D2' />
+        </div>
+        <div>
+          <Searchbar placeholder={'Search location'} />
+        </div>
+      </div>{' '}
       <Table header={TableHeader} column={airQualityInfoList} />
       <div className='pt-2'>
         <Pagination
