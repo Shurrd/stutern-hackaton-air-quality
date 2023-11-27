@@ -41,9 +41,10 @@ const GlobalIndexTable = () => {
     []
   );
   return (
-    <div>
+    <div className='mb-9'>
+      <div></div>
       <Table header={TableHeader} column={airQualityInfoList} />
-      <div className='border-t border-t-table_border  border-opacity-10 pt-2'>
+      <div className='pt-2'>
         <Pagination
           query={query}
           setQuery={setQuery}

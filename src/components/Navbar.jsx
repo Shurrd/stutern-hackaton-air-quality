@@ -8,7 +8,7 @@ import { CgClose } from 'react-icons/cg';
 import navLinks from '../utils/navLinks';
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
     setMenu((prev) => !prev);
