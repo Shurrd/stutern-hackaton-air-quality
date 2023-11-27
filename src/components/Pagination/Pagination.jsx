@@ -1,7 +1,6 @@
 import React from 'react';
 import { getPaginationData } from '../../utils';
-// import { getPaginationData } from '../../utils/utils';
-// import { Icon } from "../Icons";
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Pagination = ({ query, setQuery, count, per_page }) => {
   const { total_pages } = getPaginationData({
@@ -10,7 +9,16 @@ const Pagination = ({ query, setQuery, count, per_page }) => {
   });
 
   return (
-    <div className='flex mx-right gap-3 justify-end mr-[50px] items-center text-grey-text'>
+    <div className='flex gap-3 justify-between mr-[50px] items-center text-grey-text'>
+      <div
+        className='text-[#667085] p-2 px-3 rounded-lg cursor-pointer  flex gap-2 items-center justify-center'
+        onClick={() => {
+          query.page > 1 && setQuery({ ...query, page: query.page - 1 });
+        }}
+      >
+        <FaArrowLeft size={20} />
+        <p>Previous</p>
+      </div>
       <p>
         <select
           className='appearance-none  bg-inherit focus:outline-none'
@@ -24,21 +32,14 @@ const Pagination = ({ query, setQuery, count, per_page }) => {
         - {query.page} of {total_pages || 1}
       </p>
       <div
-        className='bg-[#B0BABF] p-2 px-3 rounded-lg cursor-pointer'
-        onClick={() => {
-          query.page > 1 && setQuery({ ...query, page: query.page - 1 });
-        }}
-      >
-        {/* <Icon id="angle-left" width="8" height="12" /> */}
-      </div>
-      <div
-        className='bg-[#B0BABF] p-2 px-3 rounded-lg cursor-pointer'
+        className='text-[#667085] p-2 px-3 rounded-lg cursor-pointer flex gap-2 items-center justify-center'
         onClick={() =>
           query.page < total_pages &&
           setQuery({ ...query, page: query.page + 1 })
         }
       >
-        {/* <Icon id="angle-right" width="8" height="12" /> */}
+        <FaArrowRight size={20} />
+        <p>Next</p>
       </div>
     </div>
   );
