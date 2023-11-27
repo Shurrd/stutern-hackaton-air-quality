@@ -15,12 +15,8 @@ const AllRoutes = () => {
   return (
     <Suspense fallback={<PageLoader />}>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path='/home' element={<Home />} />
-          </Routes>
-        </Layout>
         <Routes>
+          <Route path='/home' element={<Home />} />
           <Route path='/' element={<Overview />} />
           <Route path='/global-index' element={<GlobalIndex />} />
           <Route path='/dashboard' element={<Overview />} />

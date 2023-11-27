@@ -1,12 +1,17 @@
-import { Formik } from 'formik';
 import React from 'react';
+
+import { Formik } from 'formik';
+import { Link, useNavigate } from 'react-router-dom';
+
 import InputBox from '../../components/Inputs/InputBox';
 import { initialSignupValues, signupSchema } from '../../schema/auth.schema';
-import { Link } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const handleSubmit = (values) => {
     console.log('Signup form values', values);
+    navigate('/verify-email');
   };
 
   return (
@@ -36,10 +41,10 @@ const Signup = () => {
                 <InputBox
                   placeholder={'username'}
                   label={'Email or username'}
-                  name='username'
-                  id='username'
-                  value={values?.username}
-                  isValid={values?.username && !errors?.username}
+                  name='usernameOrEmail'
+                  id='usernameOrEmail'
+                  value={values?.usernameOrEmail}
+                  isValid={values?.usernameOrEmail && !errors?.usernameOrEmail}
                   setFieldTouched={setFieldTouched}
                 />
                 <InputBox
@@ -64,10 +69,14 @@ const Signup = () => {
                 />
               </div>
               <div>
-                <p>
-                  Don't have an account yet? <Link to={'/login'}>Sign Up</Link>
+                <p className='mt-5 mb-8'>
+                  Don't have an account yet?{' '}
+                  <Link to={'/login'} className='text-primary'>
+                    Sign Up
+                  </Link>
                 </p>
                 {/* Button Here */}
+                <Button>Sign up</Button>
               </div>
             </div>
           )}

@@ -7,7 +7,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: '',
+        default: 'text-white w-full',
+        outline: '',
       },
       size: {
         default: 'px-[52px] py-[17px]',
@@ -27,9 +28,9 @@ const Button = ({ children, className, variant, size, type }) => {
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
-      style={{
-        background: 'linear-gradient(270deg, #903AFF 0%, #FE34B9 100%)',
-      }}
+      // style={{
+      //   background: 'linear-gradient(270deg, #903AFF 0%, #FE34B9 100%)',
+      // }}
       type={type}
     >
       {children}

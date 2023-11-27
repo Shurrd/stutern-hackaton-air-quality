@@ -3,6 +3,7 @@ import React from 'react';
 import InputBox from '../../components/Inputs/InputBox';
 import { initialLoginValues, loginSchema } from '../../schema/auth.schema';
 import { Link } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 
 const Login = () => {
   const handleSubmit = (values) => {
@@ -56,11 +57,14 @@ const Login = () => {
                   />
                 </div>
                 <div>
-                  <p>
+                  <p className='my-4 text-center'>
                     Don't have an account yet?{' '}
-                    <Link to={'/signup'}>Sign Up</Link>
+                    <Link to={'/signup'} className='text-primary'>
+                      Sign Up
+                    </Link>
                   </p>
                   {/* Button Here */}
+                  <Button>Sign in</Button>
                 </div>
               </div>
             )}

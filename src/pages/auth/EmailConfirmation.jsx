@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import OtpInput from 'react-otp-input';
+import Button from '../../components/Button/Button';
 
 const EmailConfirmation = () => {
   const [otp, setOtp] = useState('');
@@ -36,6 +37,10 @@ const EmailConfirmation = () => {
         Didn't get a code?{' '}
         <span className='text-primary underline'>Click to resend</span>
       </p>
+      <div>
+        <Button>Verify</Button>
+        <Button>Cancel</Button>
+      </div>
     </div>
   );
 };
