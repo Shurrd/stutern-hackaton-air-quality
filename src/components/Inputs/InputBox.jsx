@@ -20,7 +20,7 @@ const InputBox = ({
         {label || ''}
       </label>
       <Field
-        className='border border-input rounded-md px-[14px] py-2.5 outline-0 text-[#101828]'
+        className='border border-input rounded-lg px-[14px] py-2.5 outline-0 text-[#101828]'
         type={type}
         id={id}
         name={name}
