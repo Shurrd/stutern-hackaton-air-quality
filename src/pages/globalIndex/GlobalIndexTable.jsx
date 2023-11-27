@@ -45,7 +45,7 @@ const GlobalIndexTable = () => {
     []
   );
   return (
-    <div className='mb-9'>
+    <div className='mb-9 mt-[22px] px-[30px] py-[18px] rounded-lg border-2 border-[#D0D5DD]'>
       <div className='flex justify-between'>
         <div className='flex gap-2.5 items-center'>
           <p className='text-[#11263c] sm:text-lg font-bold'>AQI DATA</p>
